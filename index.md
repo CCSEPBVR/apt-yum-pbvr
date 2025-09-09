@@ -1,3 +1,8 @@
+---
+title: Home
+layout: default
+---
+
 # package manager
 ## apt
 以下のコマンドでレポジトリを追加する
