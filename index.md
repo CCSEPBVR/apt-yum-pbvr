@@ -7,7 +7,7 @@ layout: default
 ## apt
 以下のコマンドでレポジトリを追加する
 ```
-echo "deb [trusted=yes] https://ccsepbvr.github.io/apt-yum-pbvr/apt stable main" \
+echo "deb [arch=amd64 trusted=yes] https://ccsepbvr.github.io/apt-yum-pbvr/apt stable main" \
   | sudo tee /etc/apt/sources.list.d/pbvr.list
 ```
 
