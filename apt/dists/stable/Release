@@ -1,0 +1,20 @@
+Architectures: amd64
+Codename: stable
+Components: main
+Date: Thu, 09 Apr 2026 08:08:56 +0000
+Description: pbvr APT repository
+Label: pbvr
+Origin: JAEA Naohito Sakamoto
+Suite: stable
+MD5Sum:
+ 0e1042bc29e46988ac31f4b18d01c713              182 Release
+ 5386049459977e43645a7c4f1ca89f9f              962 main/binary-amd64/Packages.gz
+SHA1:
+ f2cbd2c617c52e1f20d30772497b81952cd841b5              182 Release
+ 5db51d0580bbb1a5dd44c1c6304f0623c72c4591              962 main/binary-amd64/Packages.gz
+SHA256:
+ e59fc45697938dbc4b3510c4af19a14316ee361afbca04ae15b2904327c9744e              182 Release
+ 5748fd8267b04a4af29910a3fe4b4d5a32096c6389c4647b6836440ddfe3dc02              962 main/binary-amd64/Packages.gz
+SHA512:
+ f917558761bf26c65152d45bd31bc86cd54c2f1c254eecff912e1d1439d80ad76b6d76df3b88d81e39214b3538f06af30957c3b275d19d378450685b4e644e6f              182 Release
+ c23e5a28cfb905fbd8f2a865955bc49d521de0e203dbbbe4c2189b7f514faf68704ef0a9555fffef7b27457f08f7686a7d1a21bfef89f6bf7208adb8347e71b6              962 main/binary-amd64/Packages.gz
