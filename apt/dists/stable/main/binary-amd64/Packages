@@ -1,17 +1,16 @@
 Package: pbvr
-Architecture: amd64
 Version: 3.6.0-1
-Priority: optional
-Section: science
+Architecture: amd64
 Maintainer: Naohito Sakamoto <sakamoto.naohito@jaea.go.jp>
 Installed-Size: 126267
 Depends: libc6 (>= 2.29), libdbus-1-3 (>= 1.9.14), libegl1, libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.6), libgcc-s1 (>= 3.4), libgl1, libglib2.0-0 (>= 2.26.0), libglu1-mesa | libglu1, libglx0, libharfbuzz0b (>= 2.1.1), libice6 (>= 1:1.0.0), libopengl0, libpcre2-16-0 (>= 10.22), libpng16-16 (>= 1.6.2-1), libsm6, libssl1.1 (>= 1.1.0), libstdc++6 (>= 10), libx11-6, libx11-xcb1 (>= 2:1.6.9), libxcb-glx0, libxcb-icccm4 (>= 0.4.1), libxcb-image0 (>= 0.2.1), libxcb-keysyms1 (>= 0.4.0), libxcb-randr0 (>= 1.3), libxcb-render-util0, libxcb-render0, libxcb-shape0, libxcb-shm0 (>= 1.10), libxcb-sync1, libxcb-xfixes0, libxcb-xkb1, libxcb1 (>= 1.8), libxkbcommon-x11-0 (>= 0.5.0), libxkbcommon0 (>= 0.5.0), zlib1g (>= 1:1.1.4)
-Filename: ./pool/pbvr_3.6.0-1_amd64.deb
+Filename: pool/pbvr_3.6.0-1_amd64.deb
 Size: 34656364
 MD5sum: e11ee00fe33e26e427725d180a34aeaf
 SHA1: a53ff6921df4f44f8d7f4231d6ddf87268083c89
 SHA256: a75cbd8f274075724b0720c00a06681b179c1cc32bd849c6ed2d278f9838d333
-SHA512: 87be9da82dca56bcf440db2aa24d3d806a6f65cab41ce0511a8e371271b4d7055e5f30cad7c87d707eabe65b8ee5a085266c4edf91da547b894b6b66126d0621
+Section: science
+Priority: optional
 Homepage: https://github.com/CCSEPBVR/CS-IS-PBVR
 Description: PBVR-based scientific visualization for 3D volume data
  CS-IS-PBVR is a scientific visualization application based on
