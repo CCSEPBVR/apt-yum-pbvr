@@ -1,0 +1,16 @@
+Package: pbvr
+Version: 3.6.1-1
+Architecture: amd64
+Maintainer: PBVR Packager <pbvr@example.invalid>
+Depends: libc6, libstdc++6, libgcc-s1, libgomp1, zlib1g, libgl1, libglx0, libopengl0, libx11-6, libxext6, libfontconfig1, libfreetype6
+Filename: ./pbvr_3.6.1-1_amd64.deb
+Size: 40849952
+MD5sum: e2549b5de5542695d08270db723b931f
+SHA1: eb66d265b22ab3d429631ff07f814650b8517656
+SHA256: b1a37b9c9c7b6dc7a705d8c10df2f280e8a284690537a3f2bb17881e6a23536a
+Section: science
+Priority: optional
+Homepage: https://ccsepbvr.github.io/apt-yum-pbvr/
+Description: PBVR binary distribution
+ PBVR command line tools and Qt client application.
+
