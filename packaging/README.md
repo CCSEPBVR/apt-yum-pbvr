@@ -1,3 +1,93 @@
+# PBVR packaging
+
+## DEB package (Ubuntu 20.04 and later)
+
+The DEB package supports Ubuntu 20.04 and later on `amd64`. The PBVR 3.6.2
+release is installed under `/opt/pbvr/3.6.2/`; wrappers for `pbvr_server`,
+`pbvr_filter`, `kvsml-converter`, and `pbvr_client` are installed in
+`/usr/bin`.
+
+The package also installs the desktop entry at
+`/usr/share/applications/pbvr_client.desktop` and the PBVR client icon at
+`/usr/share/icons/hicolor/256x256/apps/pbvr_client.png`.
+
+The runtime dependencies are based on the `NEEDED` entries of the 3.6.2 ELF
+executables, bundled Qt libraries, and Qt plugins. In particular,
+`libglu1-mesa` is declared because 3.6.2 requires `libGLU.so.1` from the
+system instead of shipping that library in the release directory.
+
+### Build
+
+With `v3.6.2_Linux/` at the repository root, run:
+
+```sh
+./packaging/build-deb.sh
+```
+
+The result is:
+
+```text
+debbuild/pbvr_3.6.2-1_amd64.deb
+```
+
+An explicit version can still be supplied when building another local release:
+
+```sh
+./packaging/build-deb.sh 3.6.2
+```
+
+### Local installation and upgrade
+
+Install the package and its declared dependencies with:
+
+```sh
+sudo apt install ./debbuild/pbvr_3.6.2-1_amd64.deb
+```
+
+If PBVR 3.6.1 is already installed, the same command upgrades the `pbvr`
+package to 3.6.2. Do not remove 3.6.1 first; `dpkg` handles the package
+upgrade and the versioned `/opt/pbvr/` directories accordingly.
+
+### Check the installation
+
+```sh
+dpkg-query -W -f='${Package}\t${Version}\t${Architecture}\n' pbvr
+command -v pbvr_server pbvr_filter kvsml-converter pbvr_client
+grep -E '^(Exec|Icon)=' /usr/share/applications/pbvr_client.desktop
+test -f /usr/share/icons/hicolor/256x256/apps/pbvr_client.png
+```
+
+Run the four installed entry points:
+
+```sh
+pbvr_server --help
+pbvr_filter --help
+kvsml-converter --help
+pbvr_client
+```
+
+The last command starts the Qt GUI. The same GUI can be started from the
+desktop application menu; its desktop entry uses `Exec=pbvr_client` and
+`Icon=pbvr_client`.
+
+### Uninstall
+
+```sh
+sudo apt remove pbvr
+test ! -e /usr/bin/pbvr_server
+test ! -e /usr/bin/pbvr_filter
+test ! -e /usr/bin/kvsml-converter
+test ! -e /usr/bin/pbvr_client
+find /opt/pbvr -maxdepth 2 \( -type f -o -type l \) -print 2>/dev/null
+```
+
+The final command should produce no output for package-owned PBVR files. If it
+shows files from an older manual installation, inspect them before removing
+anything manually.
+
+This task covers local DEB packaging only. Updating the public APT repository,
+APT metadata, GitHub Pages, `gh-pages`, commits, and pushes is out of scope.
+
 # PBVR RPM packaging memo
 
 This directory contains the files used to build a binary RPM from the PBVR
