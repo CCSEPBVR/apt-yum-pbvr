@@ -1,5 +1,5 @@
 Name:           pbvr
-Version:        %{?pbvr_version}%{!?pbvr_version:3.6.1}
+Version:        %{?pbvr_version}%{!?pbvr_version:3.6.2}
 Release:        1%{?dist}
 Summary:        PBVR binary distribution
 
@@ -82,6 +82,10 @@ install -d %{buildroot}%{_datadir}/applications
 install -m 0644 v%{version}_Linux/pbvr_client.app/usr/share/applications/pbvr_client.desktop \
   %{buildroot}%{_datadir}/applications/pbvr_client.desktop
 
+install -d %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
+install -m 0644 v%{version}_Linux/pbvr_client.app/usr/share/icons/hicolor/scalable/apps/pbvr_client.svg \
+  %{buildroot}%{_datadir}/icons/hicolor/scalable/apps/pbvr_client.svg
+
 %files
 %dir /opt/pbvr
 %dir /opt/pbvr/%{version}
@@ -94,7 +98,12 @@ install -m 0644 v%{version}_Linux/pbvr_client.app/usr/share/applications/pbvr_cl
 %{_bindir}/kvsml-converter
 %{_bindir}/pbvr_client
 %{_datadir}/applications/pbvr_client.desktop
+%{_datadir}/icons/hicolor/scalable/apps/pbvr_client.svg
 
 %changelog
+* Tue Sep 15 2026 PBVR Packager <pbvr@example.invalid> - 3.6.2-1
+- Package PBVR 3.6.2 Linux binaries.
+- Install the PBVR client scalable SVG icon.
+
 * Fri Jun 19 2026 PBVR Packager <pbvr@example.invalid> - 3.6.1-1
 - Package PBVR 3.6.1 Linux binaries.

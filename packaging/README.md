@@ -133,6 +133,29 @@ rpmbuild/RPMS/x86_64/
 
 `rpmbuild/` is a local build output directory and should not be committed.
 
+## RPM verification
+
+Verify the package before installing it. The checks below include the RPM
+digest, metadata, dependencies, packaged files, the unsigned state, and the
+desktop entry and SVG icon:
+
+```sh
+RPM=./rpmbuild/RPMS/x86_64/pbvr-3.6.2-1.el8.x86_64.rpm
+rpm -K "$RPM"
+rpm -qip "$RPM"
+rpm -qp --requires "$RPM"
+rpm -qp --provides "$RPM"
+rpm -qlp "$RPM"
+rpm -qlp "$RPM" | grep -Fx /usr/share/icons/hicolor/scalable/apps/pbvr_client.svg
+rpmlint "$RPM"
+
+CHECK_DIR=$(mktemp -d)
+trap 'rm -rf "$CHECK_DIR"' EXIT
+(cd "$CHECK_DIR" && rpm2cpio "$OLDPWD/$RPM" | cpio -idm)
+desktop-file-validate "$CHECK_DIR/usr/share/applications/pbvr_client.desktop"
+test -s "$CHECK_DIR/usr/share/icons/hicolor/scalable/apps/pbvr_client.svg"
+```
+
 ## Local install test
 
 Install the generated RPM directly first:

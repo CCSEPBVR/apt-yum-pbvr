@@ -2,7 +2,7 @@
 set -eu
 
 ROOT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
-VERSION=${1:-${VERSION:-3.6.1}}
+VERSION=${1:-${VERSION:-3.6.2}}
 NAME=pbvr
 TOPDIR="${ROOT_DIR}/rpmbuild"
 TMPDIR="${TOPDIR}/tmp"
@@ -24,7 +24,7 @@ mkdir -p \
   "${TMPDIR}"
 
 tar -C "${ROOT_DIR}" \
-  --transform "s,^,${NAME}-${VERSION}/," \
+  --transform "s,^v${VERSION}_Linux,${NAME}-${VERSION}/v${VERSION}_Linux," \
   -czf "${SOURCE_ARCHIVE}" \
   "v${VERSION}_Linux"
 
