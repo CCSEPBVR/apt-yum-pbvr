@@ -1,0 +1,20 @@
+Architectures: amd64
+Codename: stable
+Components: main
+Date: Wed, 16 Sep 2026 04:05:13 +0000
+Description: PBVR APT repository
+Label: PBVR
+Origin: CCSEPBVR
+Suite: stable
+MD5Sum:
+ 34e71420a39cc807ff039f32f668628a             1224 main/binary-amd64/Packages
+ d127b43f458714a3b29ff2259313ce8c              680 main/binary-amd64/Packages.gz
+SHA1:
+ 9669ec9695dd97237512b52cef888049d41f3bbc             1224 main/binary-amd64/Packages
+ e62767954b77d9a450d0703578c70c27fcdc1704              680 main/binary-amd64/Packages.gz
+SHA256:
+ 4b2194ce401939a436eb44b62f43520bad6947bbe964b2117a2bef05e469c748             1224 main/binary-amd64/Packages
+ 2cdc1306d775e8c4711a53ae58df36018e11f57e148ad5ea5c4d6d5593396d5b              680 main/binary-amd64/Packages.gz
+SHA512:
+ af209b8dec997e28057b97f498b60c612771bb47132af5973606b4ce3dd65705bdae89370a7627b2561047c29e584fe6a42037f66204da59112a2ee493387c99             1224 main/binary-amd64/Packages
+ 7ea8589bbfd0eaa930cf61b01d09a368679ac9fd2cf9a4111464c6d9ef2a660f37d3b1d114466e3c7bf78f723e6c87b0e70ad073e7d9ec4b225ca0fb30b0365a              680 main/binary-amd64/Packages.gz

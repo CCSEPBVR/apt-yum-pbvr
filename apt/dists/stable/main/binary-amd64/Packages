@@ -3,7 +3,7 @@ Version: 3.6.2-1
 Architecture: amd64
 Maintainer: PBVR Packager <pbvr@example.invalid>
 Depends: libc6 (>= 2.29), libdbus-1-3 (>= 1.9.14), libegl1, libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.9.1), libgcc-s1 (>= 3.0), libgl1, libglu1-mesa, libglx0, libgomp1 (>= 6), libharfbuzz0b (>= 2.1.1), libice6 (>= 1:1.0.0), libopengl0, libpcre2-16-0 (>= 10.22), libpng16-16 (>= 1.6.2-1), libsm6, libstdc++6 (>= 10), libx11-6, libx11-xcb1 (>= 2:1.6.9), libxcb-cursor0 (>= 0.0.99), libxcb-glx0, libxcb-icccm4 (>= 0.4.1), libxcb-image0 (>= 0.2.1), libxcb-keysyms1 (>= 0.4.0), libxcb-randr0 (>= 1.12), libxcb-render-util0, libxcb-render0, libxcb-shape0, libxcb-shm0 (>= 1.10), libxcb-sync1, libxcb-xfixes0, libxcb-xkb1, libxcb1 (>= 1.8), libxkbcommon-x11-0 (>= 0.5.0), libxkbcommon0 (>= 0.5.0), zlib1g (>= 1:1.2.0)
-Filename: ./pbvr_3.6.2-1_amd64.deb
+Filename: pool/main/p/pbvr/pbvr_3.6.2-1_amd64.deb
 Size: 39731524
 MD5sum: 3a48187fca9d48bc66a65c58d93e6723
 SHA1: aa36e4f4d9ac2cd2d5f355ad43b0f6bc1c654fc5
